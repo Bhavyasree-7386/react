@@ -1,0 +1,73 @@
+
+<html>
+    <body>
+        <script>
+          let info=[{ 
+    "id": 1,
+    "title": "Opna Women's Short Sleeve Moisture",
+    "price": 7.95,
+     "discount":2,
+    "description": "100% Polyester, Machine wash, 100%",
+    "category": "Hand bag",
+    "image": "https://cdn.shopify.com/s/files/1/0266/627",
+    "rating": {
+        "rate": 4.5,
+        "count": 146
+    }
+},
+
+    {
+    "id": 2,
+    "title": "Opna Women's Short Sleeve Moisture",
+    "price": 7.95,
+    "discount":1.5,
+    "description": "100% Polyester, Machine wash, 100% c",
+    "category": "Hand bag",
+    "image": "https://cdn.shopify.com/s/files/1/0266/627",
+    "rating": {
+        "rate": 4.5,
+        "count": 146
+    }
+}]
+
+
+//sum of price
+ 
+function price(a,b){
+ return a+b.price
+
+}
+console.log(info.reduce(price,0))
+//price after discount
+function discounting(a,b){
+return a+(b.price-b.discount)
+}
+console.log(info.reduce(discounting,0))
+
+
+
+ function percentage(a,b){
+    return a+(b.price)
+ }
+ console.log(info.reduce(percentage,0))
+
+/*function discounting(item) {
+  return item.price - discount;
+}
+
+const discount = 10; // You should define the discount value
+
+const items = [
+  { name: 'Item 1', price: 20 },
+  { name: 'Item 2', price: 30 },
+  { name: 'Item 3', price: 40 },
+];
+
+const discountedItems = items.map(discounting);
+
+console.log(discountedItems);*/
+
+
+        </script>
+    </body>
+</html>
